@@ -1,1 +1,1 @@
-web: gunicorn BarCodeService.wsgi -log-file -
+web: gunicorn name_of_your_app.wsgi --log-file -
