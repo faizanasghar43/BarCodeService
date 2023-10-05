@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-lno!64q&i#^tx0-8##g0e1n_)j-8(g85iy#*u3qeqxbgqxxrbe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["scanner-django.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["scanner-django-6e2a7cc1bc0e.herokuapp.com", "127.0.0.1"]
 
 # Application definition
 
@@ -47,7 +47,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
 ]
 
 ROOT_URLCONF = 'BarCodeService.urls'
@@ -113,9 +112,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
