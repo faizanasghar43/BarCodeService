@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-lno!64q&i#^tx0-8##g0e1n_)j-8(g85iy#*u3qeqxbgqxxrbe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["scanner-django-6e2a7cc1bc0e.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["scanner-django-6e2a7cc1bc0e.herokuapp.com", "127.0.0.1", "www.fypml.studio", "fypml.studio"]
 
 # Application definition
 
